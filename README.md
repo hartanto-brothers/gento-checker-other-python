@@ -1,0 +1,2 @@
+# gento-checker-other-python
+GENTO CHECKER CLI PYTHON FOR OTHER SERVICES
