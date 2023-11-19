@@ -1,5 +1,5 @@
 # gento-checker-other-python
-***Credit Card Checker CLI Python Version***
+***Other Checker CLI Python Version***
 
 
 ## Requirement
@@ -10,6 +10,13 @@
 * Gento Checker Account
 
 if you don't have gento checker account you can register on this [LINK](https://gento.live/page/auth/register)
+
+**Feature**
+* Email Account Checker
+* MD5 Decrypter
+* Amazon Valid Email
+* Phone Number Validator ( Coming Soon )
+
 
 ## Setup
 **Windows**
