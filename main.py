@@ -148,7 +148,7 @@ def checker(api_key):
 
         selected_file = cc_files[selected_file_num - 1]
 
-        with open(selected_file, 'r') as file:
+        with open(selected_file, 'r', encoding="utf-8") as file:
             ccs = file.readlines()
 
         for cc in ccs:
@@ -161,25 +161,25 @@ def checker(api_key):
             if status == "DIE":
                 message = f"DIE =>: {data['data']} - Credit: {data['credit']} - {data['chekcedon']}"
                 print(Fore.RED + message)
-                with open("die.txt", "a") as declined_file:
+                with open("die.txt", "a", encoding="utf-8") as declined_file:
                     declined_file.write(message + "\n")
 
             elif status == "LIVE":
                 message = f"LIVE => {data['data']} - Credit: {data['credit']} - {data['chekcedon']}"
                 print(Fore.GREEN + message)
-                with open("live.txt", "a") as approved_file:
+                with open("live.txt", "a", encoding="utf-8") as approved_file:
                     approved_file.write(message + "\n")
 
             elif status == "UNKNOWN":
                 message = f"UNKNOWN => {data['data']} - Credit: {data['credit']} - {data['chekcedon']}"
                 print(Fore.YELLOW + message)
-                with open("unknown.txt", "a") as recheck_file:
+                with open("unknown.txt", "a", encoding="utf-8") as recheck_file:
                     recheck_file.write(message + "\n")
 
             else:
                 message = f"UNKNOWN => {cc}"
                 print(Fore.YELLOW + message)
-                with open("unknown.txt", "a") as unknown_file:
+                with open("unknown.txt", "a", encoding="utf-8") as unknown_file:
                     unknown_file.write(message + "\n")
     else:
         print("Invalid API Key. Deleting config.")
